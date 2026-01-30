@@ -769,7 +769,19 @@ ul {
 .why-grid-premium {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .why-grid-premium {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-grid-premium {
+        grid-template-columns: 1fr;
+    }
 }
 
 .why-card-premium {
@@ -784,9 +796,11 @@ ul {
     overflow: hidden;
 }
 
-.why-card-premium.active {
-    border-color: #000;
-    transform: translateY(-5px);
+.why-card-premium.active,
+.why-card-premium:hover {
+    border-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
 }
 
 .card-idx-premium {
@@ -814,12 +828,13 @@ ul {
 
 .insight-box {
     margin-top: auto;
-    background: #F8F8F8;
-    padding: 20px;
+    background: #FAFAFA;
+    padding: 16px 20px;
     border-radius: 16px;
     display: flex;
     align-items: center;
     gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .insight-emoji {
