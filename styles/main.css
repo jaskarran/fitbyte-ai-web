@@ -362,8 +362,10 @@ ul {
 
 /* --- Hero Section --- */
 /* --- Hero Section --- */
+/* --- Hero Section --- */
 .hero {
-    padding: 180px 0 120px;
+    padding: 160px 0 100px;
+    /* Reduced top padding slightly */
     position: relative;
     overflow: visible;
     background-image:
@@ -374,22 +376,27 @@ ul {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
+    /* Equal split */
     align-items: center;
-    gap: 60px;
+    gap: 40px;
+    /* Tighter gap */
 }
 
+/* Badge */
 .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 6px 14px;
+    /* Smaller padding */
     background: rgba(76, 175, 80, 0.1);
     color: #2E7D32;
     border-radius: 100px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    /* Reduced margin */
 }
 
 .hero-badge::before {
@@ -400,37 +407,49 @@ ul {
     border-radius: 50%;
 }
 
+/* Headline */
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    /* Adjusted size */
     line-height: 1.1;
     letter-spacing: -0.04em;
     font-weight: 800;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    /* Reduced margin */
     color: var(--text-primary);
 }
 
 .hero-content h1 span {
     color: #4CAF50;
+    display: block;
+    /* Ensure it breaks to new line naturally if needed, or fits well */
 }
 
+/* Description */
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    /* Bring buttons closer */
     max-width: 90%;
 }
 
+/* CTA Buttons */
 .main-cta-group {
     display: flex;
     gap: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
+    /* Bring stats closer */
+    align-items: flex-start;
+    /* Align top */
 }
 
 .btn-primary {
     background: #4CAF50;
     color: white;
-    padding: 16px 32px;
+    padding: 14px 28px;
+    /* Balanced padding */
     border-radius: 12px;
     font-weight: 600;
     font-size: 1rem;
@@ -438,6 +457,11 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    min-width: 160px;
+    /* Consistent width */
+    justify-content: center;
 }
 
 .btn-primary:hover {
@@ -450,7 +474,7 @@ ul {
     background: white;
     color: var(--text-primary);
     border: 1px solid var(--border-light);
-    padding: 16px 32px;
+    padding: 14px 28px;
     border-radius: 12px;
     font-weight: 600;
     font-size: 1rem;
@@ -458,6 +482,8 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
+    min-width: 160px;
 }
 
 .btn-secondary:hover {
@@ -474,7 +500,8 @@ ul {
 }
 
 .phone-mockup {
-    width: 320px;
+    width: 300px;
+    /* Adjusted width */
     transform-style: preserve-3d;
     animation: float 6s ease-in-out infinite;
     border-radius: 40px;
@@ -489,35 +516,36 @@ ul {
 .floating-card {
     position: absolute;
     background: white;
-    padding: 16px 20px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    /* Softer shadow */
+    padding: 12px 16px;
+    /* Compact padding */
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     gap: 12px;
     z-index: 3;
     animation: float 5s ease-in-out infinite reverse;
-    min-width: 180px;
+    min-width: 160px;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .floating-card.top-right {
     top: 15%;
-    right: -20px;
+    right: 0px;
+    /* Tucked closer */
 }
 
 .floating-card.bottom-left {
     bottom: 20%;
-    left: -20px;
+    left: 0px;
+    /* Tucked closer */
 }
 
 .fc-icon {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     background: #F1F8E9;
-    /* Light green bg */
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -530,14 +558,14 @@ ul {
 }
 
 .fc-content h4 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     margin-bottom: 2px;
     font-weight: 500;
 }
 
 .fc-content span {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-primary);
 }
