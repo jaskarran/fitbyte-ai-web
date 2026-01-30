@@ -650,14 +650,18 @@ ul {
 
 .included-flex {
     display: flex;
-    align-items: center;
-    gap: 120px;
+    align-items: flex-start;
+    gap: 80px;
+    padding-top: 40px;
 }
 
 .slider-visual {
-    flex: 1;
+    flex: 0 0 auto;
+    width: 420px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    position: sticky;
+    top: 40px;
 }
 
 .phone-frame-premium {
@@ -683,6 +687,8 @@ ul {
 
 .feature-list-container-premium {
     flex: 1;
+    max-width: 600px;
+    padding-top: 20px;
 }
 
 .section-title-left {
@@ -696,7 +702,7 @@ ul {
 .feature-list-premium {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0px;
 }
 
 .feature-item-premium {
