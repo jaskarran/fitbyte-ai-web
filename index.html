@@ -166,31 +166,36 @@
 
         <section id="whats-included" class="section included-section">
             <div class="container">
-                <div class="included-container">
+                <div class="included-flex">
                     <div class="slider-visual reveal fade-right">
-                        <div class="phone-frame">
+                        <div class="phone-frame-premium">
                             <img src="images/hero-mobile-no-edges.png" alt="FitByte App" class="slide-img"
                                 id="slider-image">
                         </div>
                     </div>
 
-                    <div class="feature-list-container reveal fade-left">
-                        <div class="section-header" style="text-align: left; margin-bottom: 40px;">
-                            <h2>What's included?</h2>
-                        </div>
-                        <div class="feature-list">
-                            <div class="feature-item active"
+                    <div class="feature-list-container-premium reveal fade-left">
+                        <h2 class="section-title-left">What's included?</h2>
+                        <div class="feature-list-premium">
+                            <div class="feature-item-premium active"
                                 onclick="updateSlider(0, 'images/hero-mobile-no-edges.png')">
-                                <h3>AI Nutrition Coach</h3>
-                                <p>Personalized diet plans and real-time feedback on your meals.</p>
+                                <div class="feature-item-content">
+                                    <h3>AI Nutrition Coach</h3>
+                                    <p>Personalized diet plans and real-time feedback on your meals.</p>
+                                </div>
                             </div>
-                            <div class="feature-item" onclick="updateSlider(1, 'images/screen-daily-journal.png')">
-                                <h3>Daily Journaling</h3>
-                                <p>Track more than just food. Log how you feel, your energy, and stress.</p>
+                            <div class="feature-item-premium"
+                                onclick="updateSlider(1, 'images/screen-daily-journal.png')">
+                                <div class="feature-item-content">
+                                    <h3>Daily Journaling</h3>
+                                    <p>Track more than just food. Log how you feel, your energy, and stress.</p>
+                                </div>
                             </div>
-                            <div class="feature-item" onclick="updateSlider(2, 'images/screen-zenalyst.png')">
-                                <h3>Zenalyst Chat</h3>
-                                <p>Chat with your AI coach to find recipes, get advice, or just vent.</p>
+                            <div class="feature-item-premium" onclick="updateSlider(2, 'images/screen-zenalyst.png')">
+                                <div class="feature-item-content">
+                                    <h3>Zenalyst Chat</h3>
+                                    <p>Chat with your AI coach to find recipes, get advice, or just vent.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,42 +205,54 @@
 
         <section id="why-choose" class="section why-section">
             <div class="container">
-                <div class="section-header reveal fade-bottom">
+                <div class="section-header-centered reveal fade-bottom">
                     <h2>Why FitByte AI?</h2>
                     <p>More than an app—it's your personal health intelligence system.</p>
                 </div>
 
-                <div class="why-grid stagger-parent">
+                <div class="why-grid-premium stagger-parent">
                     <!-- Card 1 -->
-                    <div class="why-card reveal fade-bottom">
-                        <div class="card-idx">01</div>
+                    <div class="why-card-premium reveal fade-bottom">
+                        <div class="card-idx-premium">01</div>
                         <h3>The Inner Problem</h3>
                         <p>Calorie counting feels isolating and confusing.</p>
-                        <div class="why-insight">👉 You aren't lazy, you're just uncertain.</div>
+                        <div class="insight-box">
+                            <span class="insight-emoji">👉</span>
+                            <span class="insight-text">You aren't lazy, you're just uncertain.</span>
+                        </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="why-card reveal fade-bottom">
-                        <div class="card-idx">02</div>
+                    <div class="why-card-premium reveal fade-bottom active">
+                        <div class="card-idx-premium">02</div>
                         <h3>Safety & Clarity</h3>
                         <p>Simple interface, no judgment, private data.</p>
-                        <div class="why-insight">👉 "This app understands me."</div>
+                        <div class="insight-box">
+                            <span class="insight-emoji">👉</span>
+                            <span class="insight-text">"This app understands me."</span>
+                        </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="why-card reveal fade-bottom">
-                        <div class="card-idx">03</div>
+                    <div class="why-card-premium reveal fade-bottom">
+                        <div class="card-idx-premium">03</div>
                         <h3>Visual Progress</h3>
                         <p>Dopamine from streaks and clear charts.</p>
-                        <div class="why-insight">👉 See your consistency instantly.</div>
+                        <div class="insight-box">
+                            <span class="insight-emoji">👉</span>
+                            <span class="insight-text">See your consistency instantly.</span>
+                        </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="why-card reveal fade-bottom">
-                        <div class="card-idx">04</div>
+                    <div class="why-card-premium reveal fade-bottom">
+                        <div class="card-idx-premium">04</div>
                         <h3>Hormone Insights</h3>
                         <p>It's biology, not just willpower.</p>
-                        <div class="why-insight">👉 Understand your body's signals.</div>
+                        <div class="insight-box">
+                            <span class="insight-emoji">👉</span>
+                            <span class="insight-text">Understand your body's signals.</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,7 +284,7 @@
                             </div>
                         </div>
                         <p class="review-text">"im ngl i've lost 17 lbs with it doesn't need to be exact it's pretty
-                            decent"</p>
+                            decently"</p>
                     </div>
 
                     <div class="review-card reveal fade-bottom">
@@ -325,22 +342,23 @@
 
         <section id="download" class="cta-section">
             <div class="container reveal fade-bottom">
-                <div class="cta-box">
+                <div class="cta-premium-card">
                     <h2>Start your transformation <br>today.</h2>
                     <p>Start tracking smarter with AI-powered nutrition, sustainability insights, and personalized
                         coaching. Free to download.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="app-store-btn">
+
+                    <div class="cta-buttons-premium">
+                        <a href="#" class="app-store-btn-premium">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg"
-                                alt="Apple Logo">
+                                alt="App Store">
                             <div class="btn-text">
                                 <span class="small-text">Download on the</span>
                                 <span class="big-text">App Store</span>
                             </div>
                         </a>
-                        <a href="#" class="app-store-btn">
+                        <a href="#" class="google-play-btn-premium">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg"
-                                alt="Android Logo">
+                                alt="Play Store">
                             <div class="btn-text">
                                 <span class="small-text">GET IT ON</span>
                                 <span class="big-text">Google Play</span>
