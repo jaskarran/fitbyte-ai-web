@@ -361,34 +361,60 @@ ul {
 }
 
 /* --- Hero Section --- */
+/* --- Hero Section --- */
 .hero {
-    padding-top: calc(var(--header-height) + 60px);
-    padding-bottom: 100px;
+    padding: 180px 0 120px;
+    position: relative;
     overflow: visible;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 60px;
 }
 
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(76, 175, 80, 0.1);
+    color: #2E7D32;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #4CAF50;
+    border-radius: 50%;
+}
+
 .hero-content h1 {
-    font-size: 4rem;
-    line-height: 1.05;
+    font-size: 4.5rem;
+    line-height: 1.1;
     letter-spacing: -0.04em;
     font-weight: 800;
     margin-bottom: 24px;
     color: var(--text-primary);
-    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.hero-content h1 span {
+    color: #4CAF50;
 }
 
 .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 40px;
@@ -398,53 +424,53 @@ ul {
 .main-cta-group {
     display: flex;
     gap: 16px;
+    margin-bottom: 48px;
 }
 
-.app-store-btn {
-    background: #000000;
-    border: 1px solid transparent;
-    border-radius: 14px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #fff;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    min-width: 160px;
-}
-
-.app-store-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.app-store-btn img {
-    width: 28px;
-    height: auto;
-}
-
-.app-store-btn .btn-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.1;
-}
-
-.app-store-btn .small-text {
-    font-size: 0.7rem;
-    opacity: 0.8;
-}
-
-.app-store-btn .big-text {
-    font-size: 1.05rem;
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
     font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
+.btn-primary:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.2);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Floating Cards & Visuals */
 .hero-visual {
     position: relative;
-    perspective: 1500px;
     display: flex;
     justify-content: center;
+    perspective: 1500px;
 }
 
 .phone-mockup {
@@ -452,16 +478,93 @@ ul {
     transform-style: preserve-3d;
     animation: float 6s ease-in-out infinite;
     border-radius: 40px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
     z-index: 2;
 }
 
 .mockup-img {
     width: 100%;
-    display: block;
-    border-radius: 40px;
-    /* Match phone radius */
 }
+
+.floating-card {
+    position: absolute;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    animation: float 5s ease-in-out infinite reverse;
+    min-width: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.floating-card.top-right {
+    top: 15%;
+    right: -20px;
+}
+
+.floating-card.bottom-left {
+    bottom: 20%;
+    left: -20px;
+}
+
+.fc-icon {
+    width: 44px;
+    height: 44px;
+    background: #F1F8E9;
+    /* Light green bg */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+}
+
+.fc-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.fc-content h4 {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.fc-content span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Stats Row */
+.hero-stats-row {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid var(--border-light);
+    padding-top: 32px;
+    margin-top: 20px;
+}
+
+.stat-item h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #4CAF50;
+    margin-bottom: 4px;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+
 
 /* --- Features Section --- */
 .section-header {
