@@ -64,7 +64,7 @@ function updateSlider(index, imageSrc) {
     }
 
     // Update Active State
-    const items = document.querySelectorAll('.feature-item');
+    const items = document.querySelectorAll('.feature-item-premium');
     items.forEach((item, idx) => {
         if (idx === index) {
             item.classList.add('active');
