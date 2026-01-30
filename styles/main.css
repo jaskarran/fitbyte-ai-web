@@ -383,6 +383,7 @@ ul {
     color: var(--text-primary);
     background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
