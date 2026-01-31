@@ -72,4 +72,14 @@ function updateSlider(index, imageSrc) {
             item.classList.remove('active');
         }
     });
+
+    // Update Dots
+    const dots = document.querySelectorAll('.slider-pagination .dot');
+    dots.forEach((dot, idx) => {
+        if (parseInt(idx) === parseInt(index)) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
 }

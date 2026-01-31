@@ -82,6 +82,23 @@ ul {
     padding: 0 24px;
 }
 
+@media (min-width: 1440px) {
+    :root {
+        --container-width: 1300px;
+    }
+}
+
+@media (min-width: 2000px) {
+    :root {
+        --container-width: 1500px;
+    }
+
+    html {
+        font-size: 18px;
+        /* Scale everything up slightly for giant screens/TVs */
+    }
+}
+
 .section {
     padding: 120px 0;
     position: relative;
@@ -368,6 +385,75 @@ ul {
 }
 
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+}
+
+.hamburger .bar {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        padding: 40px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .app-buttons.nav-mini {
+        display: none;
+    }
+}
+
 .app-buttons.nav-mini {
     display: flex;
     align-items: center;
@@ -420,7 +506,7 @@ ul {
 }
 
 .hero-content-center h1 {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     line-height: 1;
     letter-spacing: -0.05em;
     font-weight: 800;
@@ -660,6 +746,8 @@ ul {
     flex: 0 0 auto;
     width: 420px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     position: sticky;
     top: 40px;
@@ -684,6 +772,27 @@ ul {
 .slide-img {
     width: 100%;
     flex-shrink: 0;
+}
+
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s var(--ease-out);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--text-primary);
+    transform: scale(1.2);
 }
 
 .feature-list-container-premium {
@@ -1400,7 +1509,7 @@ ul {
 }
 
 .footer-links-group ul li a {
-    color: var(--text-secondary);
+    color: #1a1a1a;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
@@ -1495,54 +1604,193 @@ ul {
 }
 
 /* --- Responsive --- */
+/* --- Responsive adjustments will be consolidated at the end of the file --- */
+
+/* --- About Section --- */
+.about-section {
+    padding: 120px 0;
+    background: #fff;
+    position: relative;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 20px 0 24px;
+}
+
+.about-text .lead {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.badge-premium {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.about-features-mini {
+    display: grid;
+    gap: 32px;
+}
+
+.mini-feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.mini-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.mini-feature h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.mini-feature p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.about-image {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-card-premium {
+    background: #fff;
+    padding: 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    max-width: 320px;
+    text-align: center;
+    z-index: 2;
+}
+
+.about-card-premium .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-card-premium p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* --- Consolidated Responsive Section --- */
+
+/* Tablet & Smaller Laptops (1024px) */
 @media (max-width: 1024px) {
-    .container {
+    .section {
+        padding: 100px 0;
+    }
+
+    /* Fix: Changing hero-container to hero-centered to match HTML */
+    .hero-centered {
+        max-width: 100% !important;
         padding: 0 24px;
     }
 
-    .hero-container {
+    .hero-content-center h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .about-grid {
         grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-text h2 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    /* What's Included Section adjustments for Tablet/Mobile */
+    .included-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .slider-visual {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .phone-frame-premium {
+        width: 100%;
+        max-width: 340px;
+        /* Limit phone size on mobile */
+        margin: 0 auto;
+    }
+
+    .feature-list-container-premium {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-title-left {
         text-align: center;
-        justify-items: center;
-    }
-
-    .hero-content h1 {
-        font-size: 3.25rem;
-    }
-
-    .main-cta-group {
-        justify-content: center;
-    }
-
-    .phone-mockup {
-        width: 280px;
-    }
-
-    .footer-nav {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px 40px;
-    }
-
-    .footer-brand {
-        grid-column: span 2;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
     }
 }
 
+/* Mobile & Tablets (768px) */
 @media (max-width: 768px) {
-    .header {
-        height: 64px;
-    }
-
     .section {
         padding: 80px 0;
     }
 
-    .nav-links {
-        display: none;
+    .header {
+        height: 64px;
+    }
+
+    /* Navigation handled in the hamburger section above */
+
+    .hero {
+        padding-top: calc(var(--header-height) + 60px);
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .feature-card.large {
@@ -1553,31 +1801,74 @@ ul {
         column-count: 1;
     }
 
-    .cta-box {
+    .cta-premium-card {
         padding: 60px 24px;
     }
 
-    .cta-box h2 {
-        font-size: 2.5rem;
+    .cta-premium-card h2 {
+        font-size: 2.25rem;
     }
 
-    .cta-buttons {
+    .cta-buttons-premium {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+    }
+
+    .app-store-btn-premium,
+    .google-play-btn-premium {
+        width: 100%;
+        max-width: 280px;
     }
 
     .footer-nav {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
     }
 
     .footer-brand {
         grid-column: span 1;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .footer-bottom {
         flex-direction: column-reverse;
         gap: 24px;
         text-align: center;
+    }
+
+    .back-to-top {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Adjust review cards width on mobile */
+    .review-card-premium {
+        width: 300px;
+    }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.85rem;
+    }
+
+    .hero-description {
+        font-size: 1.15rem;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .cta-premium-card h2 {
+        font-size: 2rem;
     }
 }
