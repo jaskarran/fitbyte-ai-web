@@ -57,4 +57,4 @@ We reserve the right to amend these legal documents at any discretion. Continued
 
 **Compliance Contact**  
 For inquiries regarding data processing or legal adherence:  
-📧 **compliance@fitbyte.ai**
+📧 **Fitbyteais@gmail.com**

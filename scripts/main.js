@@ -49,37 +49,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-});
+    // --- Phone Mockup Shuffle ---
+    const phones = document.querySelectorAll('.highlights-mockup-container .hm-phone');
 
-// --- Image Slider Logic ---
-function updateSlider(index, imageSrc) {
-    // Update Image
-    const sliderImage = document.getElementById('slider-image');
-    if (sliderImage) {
-        sliderImage.style.opacity = '0';
-        setTimeout(() => {
-            sliderImage.src = imageSrc;
-            sliderImage.style.opacity = '1';
-        }, 200);
+    if (phones.length === 3) {
+        phones.forEach(phone => {
+            phone.addEventListener('click', function () {
+                // Ignore clicks if it's already in the center (or if we're on mobile stacked layout)
+                if (this.classList.contains('is-center') || window.innerWidth <= 768) return;
+
+                const currentCenter = Array.from(phones).find(p => p.classList.contains('is-center'));
+
+                // Swap the classes between the clicked phone and the center phone
+                const clickedClass = this.classList.contains('is-left') ? 'is-left' : 'is-right';
+                const clickedPosition = this.getAttribute('data-position');
+                const centerPosition = currentCenter.getAttribute('data-position');
+
+                this.classList.remove(clickedClass);
+                this.classList.add('is-center');
+
+                currentCenter.classList.remove('is-center');
+                currentCenter.classList.add(clickedClass);
+
+                // Update Text Descriptions
+                document.querySelectorAll('.hi-text').forEach(el => el.classList.remove('active'));
+                document.getElementById(`hi-text-${clickedPosition}`).classList.add('active');
+            });
+        });
     }
 
-    // Update Active State
-    const items = document.querySelectorAll('.feature-item-premium');
-    items.forEach((item, idx) => {
-        if (idx === index) {
-            item.classList.add('active');
-        } else {
-            item.classList.remove('active');
-        }
-    });
+    // --- Hero Parallax Effect ---
+    const hero = document.getElementById('home');
+    const parallaxTarget = document.querySelector('.parallax-target');
 
-    // Update Dots
-    const dots = document.querySelectorAll('.slider-pagination .dot');
-    dots.forEach((dot, idx) => {
-        if (parseInt(idx) === parseInt(index)) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
+    if (hero && parallaxTarget) {
+        hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+
+            // Calculate offset (very subtle)
+            const moveX = (clientX - innerWidth / 2) / innerWidth * 25;
+            const moveY = (clientY - innerHeight / 2) / innerHeight * 25;
+
+            parallaxTarget.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        // Reset on mouse leave
+        hero.addEventListener('mouseleave', () => {
+            parallaxTarget.style.transform = `translate(0, 0)`;
+        });
+    }
+
+});

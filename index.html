@@ -43,8 +43,46 @@
 
     <main>
         <section id="home" class="hero section">
+            <div class="hero-aura-bg"></div>
+            <div class="bio-floating-icons">
+                <div class="floating-icon" style="top: 20%; left: 15%;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4.5 19.5c1.5-1.5 3-4 3-7.5s-1.5-6-3-7.5m15 15c-1.5-1.5-3-4-3-7.5s1.5-6 3-7.5" />
+                        <path d="M5.5 12h13m-13-5.5a18 18 0 0 1 13 0m-13 11a18 18 0 0 0 13 0" />
+                        <circle cx="4.5" cy="4.5" r="1" fill="currentColor" />
+                        <circle cx="19.5" cy="4.5" r="1" fill="currentColor" />
+                        <circle cx="4.5" cy="19.5" r="1" fill="currentColor" />
+                        <circle cx="19.5" cy="19.5" r="1" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="floating-icon" style="top: 60%; left: 10%;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 20.94c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zM12 4.94c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" />
+                    </svg>
+                </div>
+                <div class="floating-icon" style="top: 30%; right: 15%;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s-1-1-1-4h2s-1 3-1 4Z" />
+                        <path d="M7 10c0-3 2-5 5-5s5 2 5 5-2 5-5 5-5-2-5-5Z" />
+                        <path d="M12 5c-3 0-5 2-5 5s2 5 5 5" />
+                        <path d="M12 7c-2 0-3 1-3 3s1 3 3 3" />
+                        <path d="M17 10c0-1.5-1-3-2.5-3" />
+                    </svg>
+                </div>
+                <div class="floating-icon" style="top: 70%; right: 12%;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 3v3m0 12v3M4.22 4.22l2.12 2.12m11.32 11.32l2.12 2.12M3 12h3m12 0h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                    </svg>
+                </div>
+            </div>
             <div class="container hero-centered">
-                <div class="hero-content-center reveal fade-bottom">
+                <div class="hero-content-center reveal fade-bottom parallax-target">
                     <div class="app-badge">
                         <div class="avatars">
                             <span class="avatar"
@@ -55,7 +93,15 @@
                                 style="background-image: url('https://i.pravatar.cc/100?img=8');"></span>
                         </div>
                         <span>Trusted by Thousands of users</span>
-                        <span class="stars">★ 4.5</span>
+                        <span class="stars">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            4.5
+                        </span>
                     </div>
 
                     <h1>The Future of <br>Health Tracking</h1>
@@ -71,15 +117,49 @@
                 </div>
 
                 <div class="hero-visual-center reveal scale-up">
-                    <div class="dashboard-preview">
-                        <img src="images/dashboard-centerpiece.png" alt="FitByte AI Intelligence Dashboard"
-                            class="dashboard-img">
-                        <div class="glow-effect"></div>
-                    </div>
                 </div>
             </div>
         </section>
 
+
+        <section id="highlights" class="section highlights-section">
+            <div class="container">
+                <div class="section-header reveal fade-bottom" style="margin-bottom: 60px;">
+                    <h2>Highlights <br>What Included ?</h2>
+                    <p>Experience the premium interface that powers your health journey.</p>
+                </div>
+
+                <div class="highlights-interactive-wrapper">
+                    <div class="highlights-mockup-container reveal fade-bottom" id="highlights-container">
+                        <div class="hm-phone is-left" data-position="left">
+                            <img src="images/simulator-screenshot-new.png" alt="Zenalyst AI Co-Pilot">
+                        </div>
+                        <div class="hm-phone is-center" data-position="center">
+                            <img src="images/simulator-screenshot-right.png" alt="Metabolic Health Score">
+                        </div>
+                        <div class="hm-phone is-right" data-position="right">
+                            <img src="images/simulator-screenshot-1.png" alt="Bio-Impact Synthesis">
+                        </div>
+                    </div>
+
+                    <div class="highlights-info reveal fade-bottom">
+                        <div class="hi-text active" id="hi-text-center">
+                            <h3>Metabolic Health Score</h3>
+                            <p>Comprehensive analysis of your daily metabolic balance and nutritional quality.</p>
+                        </div>
+                        <div class="hi-text" id="hi-text-left">
+                            <h3>Bio-Impact Synthesis</h3>
+                            <p>Detailed correlation between specific food choices and your somatic state.</p>
+                        </div>
+                        <div class="hi-text" id="hi-text-right">
+                            <h3>Zenalyst AI Co-Pilot</h3>
+                            <p>Advanced conversational assistant providing personalized nutritional guidance and meal
+                                planning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="features" class="section">
             <div class="container">
@@ -89,148 +169,190 @@
                         insights.</p>
                 </div>
 
-                <div class="features-grid stagger-parent">
-                    <!-- Feature 1: Smart Nutrition Tracking -->
-                    <div class="feature-card large reveal fade-bottom">
-                        <div class="feature-content">
-                            <div class="feature-icon">🥗</div>
-                            <h3>Smart Nutrition Tracking</h3>
-                            <p>Track every meal with precision. Our intelligent food database combines USDA, Open Food
-                                Facts, and more to give you accurate macro and micronutrient data—instantly.</p>
+                <div class="features-bento-grid reveal fade-bottom">
+                    <!-- 1. BIOLOGICAL CORE (Large) -->
+                    <div class="bento-card card-large biological-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4.733 19.333c.823.476 1.106 1.53.63 2.353m0-19.353c-.476.824-.193 1.877.63 2.353m13.274 14.647c-.824.476-1.107 1.53-.63 2.353m0-19.353c.476.824.193 1.877-.63 2.353M7.9 20.3a5.533 5.533 0 0 1-2.533-5.2M5.367 8.9A5.533 5.533 0 0 1 7.9 3.7m8.2 16.6a5.533 5.533 0 0 0 2.533-5.2m.05-6.2A5.533 5.533 0 0 0 16.1 3.7M8 12h8m-7 3h6m-6-6h6" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Biological Core</span>
+                        </div>
+                        <h3>Metabolic & Hormone Analytics</h3>
+                        <p>Validation of your niche biology. Understand the "Invisible Why" behind your energy levels
+                            and hormonal rhythms.</p>
+
+                        <div class="bento-visual-container">
+                            <div class="metabolic-chart">
+                                <div class="chart-line"></div>
+                                <div class="chart-point" style="left: 20%; bottom: 40%;"></div>
+                                <div class="chart-point" style="left: 50%; bottom: 80%;"></div>
+                                <div class="chart-point" style="left: 80%; bottom: 30%;"></div>
+                            </div>
+                            <div class="bio-stats-grid">
+                                <div class="bio-stat">
+                                    <span class="stat-label">Body Type</span>
+                                    <span class="stat-value">Endomorph</span>
+                                </div>
+                                <div class="bio-stat">
+                                    <span class="stat-label">Insulin</span>
+                                    <span class="stat-value">Optimal</span>
+                                </div>
+                                <div class="bio-stat">
+                                    <span class="stat-label">Cortisol</span>
+                                    <span class="stat-value">Low</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-tags">
+                            <span>Ecto/Endomorph</span>
+                            <span>Hormonal Rhythm</span>
                         </div>
                     </div>
 
-                    <!-- Feature 2: Zenalyst AI Assistant -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">🤖</div>
-                        <h3>Zenalyst AI Assistant</h3>
-                        <p>Your personal nutrition coach, powered by cutting-edge AI. Get instant answers, meal
-                            suggestions, and health insights through natural conversation.</p>
+                    <!-- 2. ZENALYST AI (Medium) -->
+                    <div class="bento-card card-medium intelligence-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-2.5 2.5M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 2.5 2.5M8 9h8m-7 3h6m-6-6h6m-6 9h6" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Intelligence</span>
+                        </div>
+                        <h3>Zenalyst AI Co-Pilot</h3>
+                        <p>Cognitive Delegation. A world-class advisor that connects sleep, food, and mood 24/7.</p>
                     </div>
 
-                    <!-- Feature 3: Carbon Footprint -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">🌱</div>
-                        <h3>Carbon Footprint Insights</h3>
-                        <p>Know your environmental impact. FitByte AI tracks the carbon footprint of your meals, helping
-                            you make sustainable food choices for a healthier planet.</p>
+                    <!-- 3. INPUT ENGINE (Small) -->
+                    <div class="bento-card card-small input-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 17A7 7 0 1 0 10 3a7 7 0 0 0 0 14Z" />
+                                    <path d="M15 15l6 6" />
+                                    <path d="M10 7c1.5 0 3 1.5 3 3" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Input Engine</span>
+                        </div>
+                        <h3>Unified Search</h3>
+                        <p>Zero Friction logging with 10+ global databases.</p>
                     </div>
 
-                    <!-- Feature 4: Advanced Analytics -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">📊</div>
-                        <h3>Advanced Analytics</h3>
-                        <p>Beautiful charts and insights that reveal your patterns. Track weight, body composition,
-                            nutrition trends, and more with intuitive visualizations.</p>
+                    <!-- 4. REGIONAL (Small) -->
+                    <div class="bento-card card-small culture-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z" />
+                                    <circle cx="12" cy="9" r="3" fill="currentColor" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Culture</span>
+                        </div>
+                        <h3>Regional Intelligence</h3>
+                        <p>Precision data for Indian and global cuisines.</p>
                     </div>
 
-                    <!-- Feature 5: Barcode Scanner -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">📷</div>
-                        <h3>Barcode Scanner</h3>
-                        <p>Scan any packaged food for instant nutritional information. Quick, accurate, effortless.</p>
-                    </div>
-
-                    <!-- Feature 6: Large Feature - Personalized Goals -->
-                    <div class="feature-card large reveal fade-bottom">
-                        <div class="feature-content">
-                            <div class="feature-icon">🎯</div>
-                            <h3>Personalized Goals</h3>
-                            <p>Whether you're losing weight, building muscle, or maintaining—FitByte AI creates a
-                                customized nutrition plan tailored to your body, lifestyle, and goals.</p>
+                    <!-- 5. RHYTHM & FLOW (Wide) -->
+                    <div class="bento-card card-wide focus-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 12c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" />
+                                    <path d="M2 18c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Rhythm & Flow</span>
+                        </div>
+                        <div class="bento-split">
+                            <div class="split-side">
+                                <h4>Mind Pulse</h4>
+                                <p>Somatic awareness bridging food and feeling.</p>
+                            </div>
+                            <div class="split-side">
+                                <h4>Circadian Management</h4>
+                                <p>Sync nutrition with your biological clock.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Feature 7: Wellness Journaling -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">📝</div>
-                        <h3>Wellness Journaling</h3>
-                        <p>Log how you feel, track your energy, and understand the mind-body connection with built-in
-                            journaling tools.</p>
+                    <!-- 6. IMPACT (Medium) -->
+                    <div class="bento-card card-medium impact-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    <path d="M2 12h20" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Impact</span>
+                        </div>
+                        <h3>Carbon Footprint</h3>
+                        <p>Ethical Excellence. Align your fitness with the planet's future via real-time CO2 analytics.
+                        </p>
                     </div>
 
-                    <!-- Feature 8: Streaks & Milestones -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">🏆</div>
-                        <h3>Streaks & Milestones</h3>
-                        <p>Stay motivated with daily streaks, achievement badges, and milestone celebrations that keep
-                            you on track.</p>
+                    <!-- 7. PERFORMANCE (Wide/Medium) -->
+                    <div class="bento-card card-wide performance-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2c0 0-5 8-5 13a5 5 0 0 0 10 0c0-5-5-13-5-13Z" />
+                                    <path d="M12 11a3 3 0 0 0-3 3c0 2 3 6 3 6s3-4 3-6a3 3 0 0 0-3-3Z" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Performance</span>
+                        </div>
+                        <h3>Correlation Engine</h3>
+                        <p>Hacking your personal code. Deciphers the secret links between habits and results.</p>
+                        <div class="mini-data-viz">
+                            <div class="viz-bar" style="height: 40%"></div>
+                            <div class="viz-bar" style="height: 70%"></div>
+                            <div class="viz-bar" style="height: 50%"></div>
+                            <div class="viz-bar" style="height: 90%"></div>
+                        </div>
                     </div>
 
-                    <!-- Feature 9: Home Screen Widgets -->
-                    <div class="feature-card reveal fade-bottom">
-                        <div class="feature-icon">�</div>
-                        <h3>Home Screen Widgets</h3>
-                        <p>Glance at your progress without opening the app. Beautiful widgets for iOS and Android keep
-                            your goals front and center.</p>
+                    <!-- 8. DOSSIER (Medium/Wide) -->
+                    <div class="bento-card card-medium authority-glow">
+                        <div class="bento-header">
+                            <span class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                    <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z" />
+                                    <path d="M9 12h6" />
+                                    <path d="M9 16h6" />
+                                </svg>
+                            </span>
+                            <span class="bento-category">Authority</span>
+                        </div>
+                        <h3>Intel Share Sheets</h3>
+                        <p>Export your biological data into professional "Elite Dossiers" for your records.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section id="whats-included" class="section included-section">
-            <div class="container">
-                <div class="included-flex">
-                    <div class="slider-visual reveal fade-right">
-                        <div class="phone-frame-premium">
-                            <img src="images/screen-home-new.png" alt="FitByte App" class="slide-img" id="slider-image">
-                        </div>
-                        <div class="slider-pagination">
-                            <span class="dot active" onclick="updateSlider(0, 'images/screen-home-new.png')"></span>
-                            <span class="dot" onclick="updateSlider(1, 'images/screen-neurochemistry-new.png')"></span>
-                            <span class="dot" onclick="updateSlider(2, 'images/screen-carbon-new.png')"></span>
-                            <span class="dot" onclick="updateSlider(3, 'images/screen-journal-mood.png')"></span>
-                            <span class="dot" onclick="updateSlider(4, 'images/screen-zenalyst-ai.png')"></span>
-                        </div>
-                    </div>
 
-                    <div class="feature-list-container-premium reveal fade-left">
-                        <h2 class="section-title-left">What's included?</h2>
-                        <div class="feature-list-premium">
-                            <div class="feature-item-premium active"
-                                onclick="updateSlider(0, 'images/screen-home-new.png')">
-                                <div class="feature-item-content">
-                                    <h3>Your Daily Macros</h3>
-                                    <p>Track your protein, your cortisol, and your carbon footprint— All Before
-                                        Breakfast.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item-premium"
-                                onclick="updateSlider(1, 'images/screen-neurochemistry-new.png')">
-                                <div class="feature-item-content">
-                                    <h3>Neurochemistry Tracking</h3>
-                                    <p>Get a hormone report card for every meal. See your food's real time impact on
-                                        focus, stress, and mood.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item-premium" onclick="updateSlider(2, 'images/screen-carbon-new.png')">
-                                <div class="feature-item-content">
-                                    <h3>Carbon Footprint Tracking</h3>
-                                    <p>Become an Eco-Champion. Watch your daily carbon footprint shrink with every meal
-                                        you log.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item-premium"
-                                onclick="updateSlider(3, 'images/screen-journal-mood.png')">
-                                <div class="feature-item-content">
-                                    <h3>Holistic Journal</h3>
-                                    <p>The first food journal that cares how you feel. Log your meals and your mood to
-                                        discover what truly fuels you.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item-premium"
-                                onclick="updateSlider(4, 'images/screen-zenalyst-ai.png')">
-                                <div class="feature-item-content">
-                                    <h3>Zenalyst AI Chat</h3>
-                                    <p>Your AI co-pilot for nutrition. Get instant, personal advice on meals, energy,
-                                        and cravings--just ask.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="why-choose" class="section why-section">
             <div class="container">
@@ -243,43 +365,85 @@
                     <!-- Card 1 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">01</div>
-                        <h3>Biology First</h3>
-                        <p>Weight is hormonal, not just mathematical. We track insulin and cortisol impact.</p>
+                        <h3>The Validation of Uniqueness</h3>
+                        <p>Generic advice creates subconscious distrust. We build profound trust by starting with your
+                            specific biological blueprint.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🧬</span>
-                            <span class="insight-text">"It's not just what you eat, but how your body reacts."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4.5 19.5c1.5-1.5 3-4 3-7.5s-1.5-6-3-7.5m15 15c-1.5-1.5-3-4-3-7.5s1.5-6 3-7.5" />
+                                    <path d="M5.5 12h13m-13-5.5a18 18 0 0 1 13 0m-13 11a18 18 0 0 0 13 0" />
+                                    <circle cx="4.5" cy="4.5" r="1" fill="currentColor" />
+                                    <circle cx="19.5" cy="4.5" r="1" fill="currentColor" />
+                                    <circle cx="4.5" cy="19.5" r="1" fill="currentColor" />
+                                    <circle cx="19.5" cy="19.5" r="1" fill="currentColor" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"I don't just see a user; I see your specific biological
+                                blueprint."</span>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">02</div>
-                        <h3>Zero Guesswork</h3>
-                        <p>Computer vision instantly identifies food mass and macro composition.</p>
+                        <h3>Radical Cognitive Delegation</h3>
+                        <p>Health management fails due to decision fatigue. Zenalyst removes the mental burden by making
+                            the best decisions for you.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">👁️</span>
-                            <span class="insight-text">"Log an entire meal in seconds with just a photo."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s-1-1-1-4h2s-1 3-1 4Z" />
+                                    <path d="M7 10c0-3 2-5 5-5s5 2 5 5-2 5-5 5-5-2-5-5Z" />
+                                    <path d="M12 5c-3 0-5 2-5 5s2 5 5 5" />
+                                    <path d="M12 7c-2 0-3 1-3 3s1 3 3 3" />
+                                    <path d="M17 10c0-1.5-1-3-2.5-3" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"Stop the mental burden of choice, simply follow and
+                                succeed."</span>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">03</div>
-                        <h3>Mood & Focus</h3>
-                        <p>Connect nutrition directly to your mental clarity and emotional stability.</p>
+                        <h3>Solving the "Invisible Why"</h3>
+                        <p>Humans crave narrative closure. We connect your physical feelings directly to your meals,
+                            giving you mastery over your internal chemistry.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🧠</span>
-                            <span class="insight-text">"Optimize your brain chemicals with your fork."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="6" r="3" />
+                                    <path d="M12 15c-3 0-5 2-5 5h10c0-3-2-5-5-5Z" />
+                                    <path d="M7 10h10" />
+                                    <path d="M12 9v6" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"Understand the 'Invisible Why' behind how you feel."</span>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">04</div>
-                        <h3>Planet Conscious</h3>
-                        <p>Visualize the carbon footprint of your diet and make greener choices.</p>
+                        <h3>The Moral "Virtue Loop"</h3>
+                        <p>Tracking carbon footprint elevates a meal choice from selfish nutrition to global
+                            contribution, adding a layer of moral satisfaction.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🌍</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    <path d="M2 12h20" />
+                                </svg>
+                            </span>
                             <span class="insight-text">"Healthy for you, healthy for the planet."</span>
                         </div>
                     </div>
@@ -287,44 +451,78 @@
                     <!-- Card 5 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">05</div>
-                        <h3>Real-Time Guide</h3>
-                        <p>A conversational AI that understands your context and offers instant advice.</p>
+                        <h3>Technical Trust Through Aesthetics</h3>
+                        <p>Subconsciously, we believe beautiful things work better. Our premium UI signals a level of
+                            technical precision that generic apps lack.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🤖</span>
-                            <span class="insight-text">"Like a nutritionist in your pocket, 24/7."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3c0 4.5-4.5 9-9 9 4.5 0 9 4.5 9 9 0-4.5 4.5-9 9-9-4.5 0-9-4.5-9-9Z" />
+                                    <path d="M19 4c0 1.5-1.5 3-3 3 1.5 0 3 1.5 3 3 0-1.5 1.5-3 3-3-1.5 0-3-1.5-3-3Z" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"Elite-level design signaling elite-level biological
+                                data."</span>
                         </div>
                     </div>
 
                     <!-- Card 6 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">06</div>
-                        <h3>Full Picture</h3>
-                        <p>Correlate food with sleep, stress, and energy levels for total insight.</p>
+                        <h3>The "Aha!" Moment</h3>
+                        <p>Humans are hardwired to seek patterns. Our engine reveals secret links between your habits
+                            and results, hacking your personal code.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">📊</span>
-                            <span class="insight-text">"See the hidden patterns in your health."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M12 2a6 6 0 0 0-6 6c0 2 .5 3.5 2 5v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2c1.5-1.5 2-3 2-5a6 6 0 0 0-6-6Z" />
+                                    <path d="M10 20h4" />
+                                    <path d="M12 22v-2" />
+                                    <path d="M9 11l2 2 3-3" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"Unlock the hidden patterns in your health data."</span>
                         </div>
                     </div>
 
                     <!-- Card 7 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">07</div>
-                        <h3>Privacy First</h3>
-                        <p>We never sell your health data. Built with privacy as an absolute foundation.</p>
+                        <h3>Predictive Certainty</h3>
+                        <p>The unknown kills motivation. We transform a vague attempt into a concrete arrival by
+                            forecasting exactly when you'll reach your goal.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🔒</span>
-                            <span class="insight-text">"Secure, encrypted, and private."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 2h14" />
+                                    <path d="M5 22h14" />
+                                    <path d="M7 2v6c0 3 5 5 5 10v4" />
+                                    <path d="M17 2v6c0 3-5 5-5 10v4" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"Transform 'trying' into a concrete 'arriving'."</span>
                         </div>
                     </div>
 
                     <!-- Card 8 -->
                     <div class="why-card-premium reveal fade-bottom">
                         <div class="card-idx-premium">08</div>
-                        <h3>Sustainable Change</h3>
-                        <p>Built on behavioral psychology to help you build habits that stick forever.</p>
+                        <h3>The Symbiotic Partnership</h3>
+                        <p>FitByte AI is your sophisticated partner, not just a tracker. We solve your health challenges
+                            together, around the clock.</p>
                         <div class="insight-box">
-                            <span class="insight-emoji">🌱</span>
-                            <span class="insight-text">"Consistency over intensity."</span>
+                            <span class="insight-emoji">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                </svg>
+                            </span>
+                            <span class="insight-text">"A sophisticated partner that never sleeps."</span>
                         </div>
                     </div>
                 </div>
@@ -334,7 +532,6 @@
         <section id="reviews" class="section reviews-section-premium">
             <div class="reviews-container-premium">
                 <div class="reviews-header-center">
-                    <div class="badge-premium">Loved by thousands</div>
                     <h2>Don't just take our word for it.</h2>
                     <p>Real results from real users tracking smarter, not harder.</p>
                 </div>
@@ -351,7 +548,38 @@
                                     <h4>Sneha Patel</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"I've tried every tracker. FitByte is the only one that gets it. Finally, an app that
                                 understands Indian diet nuances."</p>
@@ -364,7 +592,38 @@
                                     <h4>Arjun Malhotra</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"The Zenalyst chat feels like a real coach. It spotted my protein deficit from just dal
                                 and roti instantly."</p>
@@ -377,7 +636,38 @@
                                     <h4>Elena Rodriguez</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"Finally, an app that doesn't shame you. It focuses on nourishment and energy, not just
                                 calories."</p>
@@ -390,7 +680,38 @@
                                     <h4>Rohan Sharma</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"Lost 5kg in 2 months. My energy is stable all day, even with my usual homemade meals. No
                                 more crashing."</p>
@@ -403,7 +724,38 @@
                                     <h4>Sneha Patel</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"I've tried every tracker. FitByte is the only one that gets it. Finally, an app that
                                 understands Indian diet nuances."</p>
@@ -415,7 +767,38 @@
                                     <h4>Arjun Malhotra</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"The Zenalyst chat feels like a real coach. It spotted my protein deficit from just dal
                                 and roti instantly."</p>
@@ -432,7 +815,38 @@
                                     <h4>Vikram Singh</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"As a vegetarian, hitting protein goals was hard. This app showed me exactly how to do it
                                 with paneer and lentils."</p>
@@ -445,7 +859,38 @@
                                     <h4>Priya Mehta</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"I love the photo logging. It's so fast. It actually recognized my paneer tikka and
                                 butter naan instantly!"</p>
@@ -458,7 +903,38 @@
                                     <h4>Tom Hayes</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"Aesthetically unmatched. It makes health feel premium and important, not like a chore."
                             </p>
@@ -471,7 +947,38 @@
                                     <h4>Ananya Kapoor</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"The holistic score is genius. I can see how sleep affects my cravings. It's all
                                 connected."</p>
@@ -484,7 +991,38 @@
                                     <h4>Vikram Singh</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"As a vegetarian, hitting protein goals was hard. This app showed me exactly how to do it
                                 with paneer and lentils."</p>
@@ -496,7 +1034,38 @@
                                     <h4>Priya Mehta</h4>
                                     <span class="verified-badge">Verified User</span>
                                 </div>
-                                <div class="review-stars">★★★★★</div>
+                                <div class="review-stars">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--star-gold)"
+                                        stroke="var(--star-gold)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                </div>
                             </div>
                             <p>"I love the photo logging. It's so fast. It actually recognized my paneer tikka and
                                 butter naan instantly!"</p>
@@ -537,34 +1106,66 @@
 
         <section id="about" class="section about-section">
             <div class="container reveal fade-bottom">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <span class="badge-premium">Our Vision</span>
-                        <h2>A Health Companion that <br>Actually Understands You.</h2>
-                        <p class="lead">FitByte AI was built to solve the frustration of generic health tracking. We
-                            believe your app should know the difference between a homemade dal and a processed meal, and
-                            understand how your culture impacts your nutrition.</p>
-                        <div class="about-features-mini">
-                            <div class="mini-feature">
-                                <div class="mini-icon">🎯</div>
-                                <div>
+                <div class="about-bento-grid">
+                    <!-- Left Column: Vision & Features -->
+                    <div class="about-content-left reveal fade-right">
+                        <span class="badge-premium-pill">OUR VISION</span>
+                        <h2 class="about-headline">A Health Companion that<br>Actually Understands You.</h2>
+                        <p class="about-lead">FitByte AI was built to solve the frustration of generic health tracking.
+                            We believe your app should know the difference between a homemade dal and a processed meal,
+                            and understand how your culture impacts your nutrition.</p>
+
+                        <div class="about-features-elegant">
+                            <div class="elegant-feature">
+                                <div class="elegant-icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <circle cx="12" cy="12" r="5" />
+                                        <circle cx="12" cy="12" r="1" />
+                                    </svg>
+                                </div>
+                                <div class="elegant-text">
                                     <h4>Precision Focus</h4>
                                     <p>Deep localized context for authentic nutritional accuracy.</p>
                                 </div>
                             </div>
-                            <div class="mini-feature">
-                                <div class="mini-icon">🌍</div>
-                                <div>
+                            <div class="elegant-feature">
+                                <div class="elegant-icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                        <path d="M2 12h20" />
+                                    </svg>
+                                </div>
+                                <div class="elegant-text">
                                     <h4>Conscious Living</h4>
                                     <p>Track your environmental footprint alongside your fitness.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <div class="about-card-premium">
-                            <div class="card-icon">💡</div>
-                            <p>"The future of health isn't just about counting; it's about understanding."</p>
+
+                    <!-- Right Column: Floating Quote Box -->
+                    <div class="about-visual-right reveal fade-left">
+                        <div class="floating-glass-container">
+                            <div class="vision-quote-card">
+                                <div class="quote-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M12 2a6 6 0 0 0-6 6c0 2 .5 3.5 2 5v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2c1.5-1.5 2-3 2-5a6 6 0 0 0-6-6Z" />
+                                        <path d="M10 20h4" />
+                                        <path d="M12 22v-2" />
+                                        <path d="M9 11l2 2 3-3" />
+                                    </svg>
+                                </div>
+                                <blockquote>
+                                    "The future of health isn't just about counting; it's about understanding."
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -619,6 +1220,13 @@
                     <ul>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="mailto:Fitbyteais@gmail.com">Contact</a></li>
                     </ul>
                 </div>
             </div>
