@@ -65,6 +65,10 @@ img {
     user-select: none;
 }
 
+svg {
+    stroke-width: 1.8;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -762,7 +766,7 @@ ul {
 .bento-icon svg {
     width: 28px;
     height: 28px;
-    stroke-width: 2;
+    stroke-width: 1.8;
 }
 
 .bento-card:hover .bento-icon {
@@ -1192,7 +1196,7 @@ ul {
 .insight-emoji svg {
     width: 22px;
     height: 22px;
-    stroke-width: 2;
+    stroke-width: 1.8;
 }
 
 .insight-text {
