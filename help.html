@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - FitByte AI</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-subtle: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-stroke: rgba(0, 0, 0, 0.05);
+            --aurora-indigo: rgba(79, 70, 229, 0.08);
+            --aurora-violet: rgba(139, 92, 246, 0.08);
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Aurora Glow Backgrounds - Subtler for Light Theme */
+        .aurora-bg {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .glow-1 {
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, var(--aurora-indigo) 0%, transparent 70%);
+            filter: blur(80px);
+        }
+
+        .glow-2 {
+            position: absolute;
+            bottom: -10%;
+            left: -5%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, var(--aurora-violet) 0%, transparent 70%);
+            filter: blur(80px);
+        }
+
+        .help-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 160px 24px 100px;
+        }
+
+        .help-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .help-header h1 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .help-card {
+            background: #fff;
+            border: 1px solid var(--glass-stroke);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s var(--ease-out);
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .help-card:hover {
+            transform: translateY(-8px);
+            background: #fff;
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .help-card-icon {
+            width: 48px;
+            height: 48px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .help-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .help-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .category-label {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f1f5f9;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .help-container { padding-top: 120px; }
+            .help-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aurora-bg">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar container" style="background: rgba(255, 255, 255, 0.8); border-color: rgba(0,0,0,0.05);">
+            <a href="index.html" class="logo" style="color: #000;">
+                <img src="images/logo.jpg" alt="FitByte AI Logo">
+                <span>FitByte AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link" style="color: #000;">About</a>
+                <a href="support.html" class="nav-link" style="color: #000;">Support</a>
+            </div>
+
+            <div class="app-buttons nav-mini">
+                <a href="index.html#download" class="nav-app-btn-pill" style="background: #000; color: #fff;">
+                    <img src="images/apple-logo.svg" alt="">
+                    <span>Download</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="help-container">
+        <div class="help-header reveal fade-bottom active">
+            <h1>Help Center</h1>
+        </div>
+
+        <div class="help-grid reveal fade-bottom active">
+            <!-- Getting Started -->
+            <div class="help-card">
+                <span class="category-label">Getting Started</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                </div>
+                <h3>Your Bio-Identity</h3>
+                <p>Learn how to set up your metabolic profile and hormone-aware tracking protocols.</p>
+            </div>
+
+            <!-- Zenalyst AI -->
+            <div class="help-card">
+                <span class="category-label">Zenalyst AI</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                </div>
+                <h3>The Command Center</h3>
+                <p>Mastering AI-driven nutritional synthesis and conversational coaching.</p>
+            </div>
+
+            <!-- Sync & Data -->
+            <div class="help-card">
+                <span class="category-label">Sync & Data</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </div>
+                <h3>Health Integrations</h3>
+                <p>Connecting Apple HealthKit and Google Health Connect for real-time biometric synchronicity.</p>
+            </div>
+
+            <!-- Nutrition -->
+            <div class="help-card">
+                <span class="category-label">Nutrition</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                </div>
+                <h3>Precision Journaling</h3>
+                <p>Using photo logging and barcode scanning for authentic nutritional accuracy.</p>
+            </div>
+
+            <!-- Sustainability -->
+            <div class="help-card">
+                <span class="category-label">Sustainability</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                </div>
+                <h3>The Impact Factor</h3>
+                <p>Understanding your environmental footprint and CO2e tracking within the app.</p>
+            </div>
+
+            <!-- Elite Status -->
+            <div class="help-card">
+                <span class="category-label">Subscription</span>
+                <div class="help-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <h3>FitByte Elite</h3>
+                <p>Unlocking premium biometric insights, hormone pruning, and regional food manifests.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: #f8fafc; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+            <div class="footer-nav">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: #000;">
+                        <img src="images/logo.jpg" alt="FitByte AI Logo">
+                        <span>FitByte AI</span>
+                    </a>
+                    <p class="footer-desc" style="color: #64748b;">The AI-powered health companion that understands your biology, not just your calories.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 style="color: #0f172a;">Help</h4>
+                    <ul>
+                        <li><a href="support.html" style="color: #64748b;">Support Home</a></li>
+                        <li><a href="mailto:Fitbyteais@gmail.com" style="color: #64748b;">Contact Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright" style="color: #94a3b8;">© 2026 FitByte AI. Elite Intelligence Stack.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
