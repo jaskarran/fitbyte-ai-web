@@ -146,13 +146,13 @@
                             <p>Comprehensive analysis of your daily metabolic balance and nutritional quality.</p>
                         </div>
                         <div class="hi-text" id="hi-text-left">
-                            <h3>Bio-Impact Synthesis</h3>
-                            <p>Detailed correlation between specific food choices and your somatic state.</p>
-                        </div>
-                        <div class="hi-text" id="hi-text-right">
                             <h3>Zenalyst AI Co-Pilot</h3>
                             <p>Advanced conversational assistant providing personalized nutritional guidance and meal
                                 planning.</p>
+                        </div>
+                        <div class="hi-text" id="hi-text-right">
+                            <h3>Bio-Impact Synthesis</h3>
+                            <p>Detailed correlation between specific food choices and your somatic state.</p>
                         </div>
                     </div>
                 </div>
@@ -789,9 +789,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="about" class="section about-section">
+        </section>        <section id="about" class="section about-section">
             <!-- Immersive Vision Atmosphere -->
             <div class="atmos-glow vision-glow-teal"></div>
             <div class="atmos-glow vision-glow-indigo"></div>
@@ -801,66 +799,131 @@
                 <div class="about-bento-grid">
                     <!-- Left Column: Vision & Features -->
                     <div class="about-content-left reveal fade-right">
-                        <div class="badge-premium-pill-vision"><span>OUR VISION</span></div>
-                        <h2 class="about-headline">A Health Companion that<br><span class="text-teal">Actually Understands You.</span></h2>
-                        <p class="about-lead">FitByte AI was built to solve the frustration of generic health tracking.
-                            We believe your app should know the difference between a homemade dal and a processed meal,
-                            and understand how your <span class="text-green">culture</span> impacts your <span class="text-purple">nutrition</span>.</p>
-
-                        <div class="about-features-elegant">
-                            <div class="elegant-feature ef-indigo">
-                                <div class="elegant-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <circle cx="12" cy="12" r="5" />
-                                        <circle cx="12" cy="12" r="1" />
-                                    </svg>
-                                </div>
-                                <div class="elegant-text">
-                                    <h4>Precision Focus</h4>
-                                    <p>Deep localized context for authentic nutritional accuracy.</p>
-                                </div>
-                            </div>
-                            <div class="elegant-feature ef-green">
-                                <div class="elegant-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path
-                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                                        <path d="M2 12h20" />
-                                    </svg>
-                                </div>
-                                <div class="elegant-text">
-                                    <h4>Conscious Living</h4>
-                                    <p>Track your environmental footprint alongside your fitness.</p>
-                                </div>
-                            </div>
+                        <div class="badge-premium-pill-vision">
+                            <span class="pulse-dot"></span>
+                            <span>CULTURAL BIO-INTELLIGENCE</span>
                         </div>
+                        <h2 class="about-headline">A Health Companion that<br><span class="text-gradient-teal">Actually Understands You.</span></h2>
+                        <p class="about-lead">Generic health apps fail because they treat wholesome, home-prepared meals as mystery calories. FitByte AI is trained on global culinary biometrics—understanding how traditional ingredients, healthy fats, and bio-availability genuinely fuel your body.</p>
                     </div>
 
-                    <!-- Right Column: Stacked Glass Vision Scene -->
+                    <!-- Right Column: Interactive High-Art Telemetry Dashboard -->
                     <div class="about-visual-right reveal fade-left">
-                        <div class="floating-glass-stack">
-                            <div class="vision-quote-card-premium floating-buoyancy">
-                                <div class="quote-icon-vision">
-                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                                        <circle cx="12" cy="12" r="4" />
+                        <div class="telemetry-showcase-card">
+                            <!-- Telemetry Top Bar -->
+                            <div class="telemetry-top-bar">
+                                <div class="live-status-badge">
+                                    <span class="live-dot-pulse"></span>
+                                    <span>LIVE BIO-TELEMETRY</span>
+                                </div>
+                                <span class="telemetry-subtitle">FitByte AI vs Standard Tracking</span>
+                            </div>
+
+                            <!-- Interactive Meal Selector Tabs -->
+                            <div class="meal-toggle-wrapper">
+                                <button class="meal-toggle-btn active" id="meal-tab-authentic" onclick="switchMealTelemetry('authentic')">
+                                    <span class="tab-emoji">🥗</span>
+                                    <span class="tab-label">Mediterranean Quinoa Bowl</span>
+                                </button>
+                                <button class="meal-toggle-btn" id="meal-tab-processed" onclick="switchMealTelemetry('processed')">
+                                    <span class="tab-emoji">🍟</span>
+                                    <span class="tab-label">Ultra-Processed Meal</span>
+                                </button>
+                            </div>
+
+                            <!-- Telemetry Waveform Visualizer -->
+                            <div class="waveform-box">
+                                <div class="waveform-info">
+                                    <span class="waveform-title">Metabolic Glycemic Response</span>
+                                    <span class="waveform-status-badge" id="waveform-badge">Optimal Gradual Response</span>
+                                </div>
+                                
+                                <div class="waveform-svg-wrapper">
+                                    <svg viewBox="0 0 400 120" class="waveform-svg">
+                                        <defs>
+                                            <linearGradient id="waveGradientAuthentic" x1="0" y1="0" x2="1" y2="0">
+                                                <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.8"/>
+                                                <stop offset="50%" stop-color="#32D74B" stop-opacity="0.9"/>
+                                                <stop offset="100%" stop-color="#00B4D8" stop-opacity="0.8"/>
+                                            </linearGradient>
+                                            <linearGradient id="waveGradientProcessed" x1="0" y1="0" x2="1" y2="0">
+                                                <stop offset="0%" stop-color="#FF453A" stop-opacity="0.9"/>
+                                                <stop offset="50%" stop-color="#BF5AF2" stop-opacity="0.9"/>
+                                                <stop offset="100%" stop-color="#FF3B30" stop-opacity="0.8"/>
+                                            </linearGradient>
+                                            <linearGradient id="fillGradientAuthentic" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#32D74B" stop-opacity="0.25"/>
+                                                <stop offset="100%" stop-color="#32D74B" stop-opacity="0.0"/>
+                                            </linearGradient>
+                                        </defs>
+
+                                        <!-- Grid Lines -->
+                                        <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(0,0,0,0.05)" stroke-dasharray="4 4"/>
+                                        <line x1="0" y1="60" x2="400" y2="60" stroke="rgba(0,0,0,0.05)" stroke-dasharray="4 4"/>
+                                        <line x1="0" y1="90" x2="400" y2="90" stroke="rgba(0,0,0,0.05)" stroke-dasharray="4 4"/>
+
+                                        <!-- Wave Path -->
+                                        <path id="waveform-fill" d="M0,90 Q 80,85 160,55 T 320,65 T 400,85 L 400,120 L 0,120 Z" fill="url(#fillGradientAuthentic)" />
+                                        <path id="waveform-path" d="M0,90 Q 80,85 160,55 T 320,65 T 400,85" fill="none" stroke="url(#waveGradientAuthentic)" stroke-width="3.5" stroke-linecap="round"/>
+
+                                        <!-- Peak Indicator Point -->
+                                        <circle id="waveform-peak-dot" cx="160" cy="55" r="5" fill="#32D74B" stroke="#ffffff" stroke-width="2"/>
                                     </svg>
                                 </div>
-                                <div class="vision-text">
-                                    <p>"The future of health isn't just about counting; it's about <strong>understanding</strong>."</p>
+                            </div>
+
+                            <!-- Telemetry Metrics Grid -->
+                            <div class="telemetry-metrics-grid">
+                                <div class="telemetry-metric-card">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Bio-Protein Quality</span>
+                                        <span class="metric-val" id="val-protein">94%</span>
+                                    </div>
+                                    <div class="metric-progress-track">
+                                        <div class="metric-progress-bar progress-teal" id="bar-protein" style="width: 94%;"></div>
+                                    </div>
                                 </div>
-                                <!-- Vision Orbital Particles -->
-                                <div class="vision-orbitals">
-                                    <div class="orbital v-orb-1"></div>
-                                    <div class="orbital v-orb-2"></div>
+
+                                <div class="telemetry-metric-card">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Glycemic Stability</span>
+                                        <span class="metric-val" id="val-glycemic">Steady</span>
+                                    </div>
+                                    <div class="metric-progress-track">
+                                        <div class="metric-progress-bar progress-green" id="bar-glycemic" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="telemetry-metric-card">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Micro-Nutrient Density</span>
+                                        <span class="metric-val" id="val-micro">9.6 / 10</span>
+                                    </div>
+                                    <div class="metric-progress-track">
+                                        <div class="metric-progress-bar progress-indigo" id="bar-micro" style="width: 96%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="telemetry-metric-card">
+                                    <div class="metric-header">
+                                        <span class="metric-label">Carbon Efficiency</span>
+                                        <span class="metric-val" id="val-carbon">-380g CO₂</span>
+                                    </div>
+                                    <div class="metric-progress-track">
+                                        <div class="metric-progress-bar progress-green" id="bar-carbon" style="width: 92%;"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="vision-card-shadow"></div>
+
+                            <!-- Editorial Quote Footer -->
+                            <div class="vision-editorial-footer">
+                                <div class="quote-mark">“</div>
+                                <p class="quote-content">The future of health isn't about counting numbers—it's about understanding human culture, real food, and individual metabolic biology.</p>
+                                <div class="quote-author-info">
+                                    <span class="author-name">Dr. Aris Thorne</span>
+                                    <span class="author-title">Metabolic Systems Advisor & Clinical AI Lead</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
