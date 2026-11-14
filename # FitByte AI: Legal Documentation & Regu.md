@@ -10,8 +10,16 @@
 ### 1. Data Collection & Architecture
 FitByte AI utilizes a high-fidelity data architecture to process biometric information, including but not limited to body mass, age, activity metrics, and dietary intake. This data is synthesized to generate a personalized nutritional blueprint. All data is structured and persists within secure relational databases via Supabase, ensuring compartmentalized accessibility.
 
-### 2. Biometric Synchronicity
-Our platform provides optional integration with **Google Health Connect** and **Apple HealthKit**. These integrations facilitate the real-time synchronization of physiological metrics (e.g., step count and active energy expenditure). This data is utilized strictly for the dynamic recalibration of nutritional targets based on physical exertion.
+### 2. Biometric Synchronicity & Third-Party Wearables
+Our platform provides optional integration with **Google Health Connect**, **Apple HealthKit**, **WHOOP API**, and **Oura Ring API**. These integrations facilitate the real-time synchronization of physiological metrics (e.g., step count and active energy expenditure). This data is utilized strictly for the dynamic recalibration of nutritional targets based on physical exertion.
+
+#### Third-Party Wearable Integrations (WHOOP, Oura, Health Connect & Apple Health)
+Our application provides optional, user-authorized integrations with third-party wearable platforms, including the WHOOP API, Oura Ring API, Apple HealthKit, and Google Health Connect.
+
+1. **Data Collected**: When authorized by the user via OAuth, we collect physiological telemetry such as sleep performance, sleep cycles, resting heart rate, heart rate variability (HRV), active strain, and recovery metrics.
+2. **Purpose of Use**: This data is used solely to provide personalized health, recovery, and nutritional insights within the application.
+3. **No Commercial Sale or Advertising**: We strictly do not sell, license, rent, or share wearable or biometric data with data brokers, ad networks, or third-party marketing services.
+4. **User Control & Disconnection**: Users retain complete ownership of their data and may disconnect their wearable account at any time directly through the app settings. Disconnecting immediately revokes all OAuth access tokens, stops future data synchronization, and enables users to request deletion of previously synced wearable records.
 
 ### 3. Artificial Intelligence Protocols
 Meal descriptions and nutritional queries are processed through sophisticated Large Language Models (LLMs), including the **Google Gemma series**. FitByte AI implements rigorous data anonymization protocols: PII (Personally Identifiable Information) is stripped from data packets prior to AI inference to ensure absolute user anonymity.
